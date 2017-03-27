@@ -379,7 +379,7 @@ final class YarnTwillPreparer implements TwillPreparer {
 
           createLauncherJar(localFiles);
           createTwillJar(createBundler(classAcceptor), localFiles);
-          createApplicationJar(createApplicationJarBundler(classAcceptor), localFiles);
+          createApplicationJar(createBundler(classAcceptor), localFiles);
           createResourcesJar(createBundler(classAcceptor), localFiles);
 
           Path runtimeConfigDir = Files.createTempDirectory(localStagingDir.toPath(),
